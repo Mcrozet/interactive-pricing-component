@@ -42,6 +42,10 @@ function mouseUp(){
     setColor("hsl(174, 86%, 45%)");
 }
 
+function updateProgressValue(){
+    document.getElementById("progress_bar").value = rng_views.value;
+}
+
 function setColor(color){
     style.innerHTML = "#range_views::-webkit-slider-thumb { background-color: "+ color +"; }";
 }
