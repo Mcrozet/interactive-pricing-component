@@ -5,35 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
   <title>Frontend Mentor | Interactive pricing component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  </head>
+  <body>
+      <div id="title">
+          <img src="images/pattern-circles.svg" alt="background circles" id="bg-circle">
+          <h1>Simple, traffic-based pricing</h1>
+          <h2>Sign-up for our 30-day trial. No credit card required.</h2>
+      </div>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+      <div id="content">
+          <div id="content_price">
+            <p id="p_views"><span id="numbers_views">100K</span> PAGEVIEWS</p>
+            <p id="p_price"><span id="price">$16.00</span> / <span id="time_abo">month</span></p>
+          </div>
 
-  Pageviews
-  $ /month
+          <div id="slider">
+              <style data="rangeBgColor" type="text/css"></style>
+              <input type="range" id="range_views" min="0" max="4" value="0" onmousedown="mouseDown()" onmouseup="mouseUp()">
+          </div>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+          <div id="duration">
+            Monthly Billing
+            Yearly Billing 25% discount
+          </div>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+          <div id="explications">
+            unlimited websites
+            100% data ownership
+            Email reports
 
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            Start my trial
+          </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">CROZET Mathieu</a>.
+      </div>
+  </body>
+
+  <script src="index.js"></script>
 </html>

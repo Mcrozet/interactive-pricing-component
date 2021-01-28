@@ -1,0 +1,164 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* ----- FONTS ------ */
+
+@font-face {
+    font-family: manrope light;
+    src: url("fonts/static/Manrope-Light.ttf");
+}
+
+@font-face {
+    font-family: manrope bold;
+    src: url("fonts/static/Manrope-Bold.ttf");
+}
+
+@font-face {
+    font-family: manrope medium;
+    src: url("fonts/static/Manrope-Medium.ttf");
+}
+
+@font-face {
+    font-family: manrope extraBold;
+    src: url("fonts/static/Manrope-ExtraBold.ttf");
+}
+
+
+/* ------ BACKGROUND ------- */
+
+body{
+    background-image: url("images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(230, 100%, 99%);
+}
+
+#bg-pattern{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+/* ----- Title ----- */
+
+#bg-circle{
+    position: absolute;
+    left: 50%;
+    margin-left: -73px;
+    margin-top: -45px;
+    z-index: -1;
+}
+
+#title{
+    height: 160px;
+    width: 400px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#title h1{
+    font-family: manrope extraBold;
+    font-size: 27px;
+    margin-bottom: 15px;
+    color: hsl(227, 35%, 25%);
+}
+
+#title h2{
+    font-family: manrope light;
+    font-size: 15px;
+    color: hsl(225, 20%, 60%);
+    margin-top: 0px;
+}
+
+
+/* ----- CONTENT ----- */
+
+#content{
+    width: 500px;
+    height: 400px;
+    background-color: hsl(0, 0%, 100%);
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: manrope medium;
+}
+
+#content_price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#p_views{
+    color: hsl(225, 20%, 60%);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+#price{
+    color: hsl(227, 35%, 25%);
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#p_price{
+    display: flex;
+    align-items: center;
+    color: hsl(225, 20%, 60%);
+}
+
+/* ----- SLIDER ---- */
+
+#range_views {
+    height: 48px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#range_views:focus {
+    outline: none;
+}
+
+#range_views::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    content: "";
+    border-radius: 5px;
+    background-color: hsl(224, 65%, 95%);
+}
+
+#range_views::-webkit-slider-thumb {
+    box-shadow: 0px 15px 20px hsl(174, 77%, 80%);
+    height: 36px;
+    width: 36px;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+    background: hsl(174, 86%, 45%) url("images/icon-slider.svg") no-repeat;
+    background-position-x: 7px;
+    background-position-y: 12px;
+    cursor: pointer;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+/* + 1444 */
+
+@media (min-width: 1444px){
+
+    body{
+        background-size: 100%;
+    }
+}
