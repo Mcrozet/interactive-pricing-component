@@ -79,7 +79,7 @@ body{
 
 #content{
     width: 500px;
-    height: 400px;
+    height: 430px;
     background-color: hsl(0, 0%, 100%);
     margin: auto;
     border-radius: 10px;
@@ -152,6 +152,130 @@ body{
     cursor: pointer;
 }
 
+/** ----- DURATION ----- **/
+
+#duration{
+    margin-top: 40px;
+    color: hsl(225, 20%, 60%);
+    text-align: right;
+    font-size: 14px;
+}
+
+#month_choice_text{
+    margin-right: 15px;
+}
+
+#discount_text{
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 11px;
+}
+
+hr{
+    margin-top: 50px;
+    width: 600px;
+    margin-left: -50px;
+    border: 1px solid #f5f5f5;
+}
+
+/* Switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 21px;
+    margin-right: 15px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: hsl(174, 86%, 45%);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/** ----- EXPLICATIONS ----- **/
+
+#explications{
+    display: flex;
+    font-size: 15px;
+    color: hsl(225, 20%, 60%);
+    margin-top: 20px;
+}
+
+.img_checked{
+    background-image: url("images/icon-check.svg");
+    width: 9px;
+    height: 8px;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+/* button trial */
+
+#button_start_trial a{
+    text-decoration: none;
+    border: 0 none;
+    color: hsl(0, 0%, 76%);
+}
+
+#button_start_trial:hover a{
+    color: white;
+}
+
+#button_start_trial{
+    background-color: hsl(227, 35%, 25%);
+    height: 30px;
+    width: 165px;
+    text-align: center;
+    border-radius: 25px;
+    padding-top: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 140px;
+}
+
 /* ----- MEDIA QUERIES ----- */
 
 /* + 1444 */
@@ -160,5 +284,90 @@ body{
 
     body{
         background-size: 100%;
+    }
+}
+
+@media (max-width: 620px){
+
+    #content{
+        width: 360px;
+    }
+
+    #checked_explications{
+        width: 175px;
+    }
+
+    #button_start_trial{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 475px)
+{
+    #content{
+        width: 240px;
+        height: 500px;
+    }
+
+    hr{
+        width: 340px;
+    }
+
+    #content_price{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #p_price{
+        margin-top: 60px;
+    }
+
+    #slider{
+        margin-top: -140px;
+    }
+
+    #duration{
+        margin-top: 93px;
+    }
+
+    #title{
+        width: 340px;
+    }
+
+    #title h1{
+        font-size: 22px;
+    }
+
+    #title h2{
+        width: 205px;
+        margin-left: 60px;
+        font-size: 14px;
+    }
+
+    #duration{
+        text-align: initial;
+        width: 305px;
+        margin-left: -24px;
+    }
+
+    #hide_discount{
+        display: none;
+    }
+
+    #explications{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #checked_explications{
+        margin: -5px auto auto;
+    }
+
+    #checked_explications p{
+        margin-bottom: -11px;
+    }
+
+    #button_start_trial{
+        margin: 40px auto auto;
     }
 }

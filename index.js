@@ -25,7 +25,12 @@ function updateRange(){
         price_out.textContent = range_price_year[rng_views.value];
         time_abo.textContent = "year";
     }
-};
+}
+
+$('#check_box_time_abo').on("click", function(){
+    year = !year;
+    updateRange();
+});
 
 function mouseDown(){
     document.getElementById("range_views").style.cursor = "grabbing";
